@@ -1,5 +1,5 @@
 services:
-  agdb:
+  agenda:
     container_name: agenda
     build: .
     image: agenda:latest
