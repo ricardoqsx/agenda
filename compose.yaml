@@ -1,0 +1,40 @@
+services:
+  agdb:
+    container_name: agenda
+    build: .
+    image: agenda:latest
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    ports:
+      - 8100:5000
+    volumes:
+      - ./agenda:/agenda
+    restart: unless-stopped
+    networks:
+      - agnet
+    depends_on:
+      - agdb
+
+  agdb:
+    container_name: agdb
+    image: mariadb:latest
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    env_file: .env
+    volumes:
+      - ./db:/var/lib/mysql
+    networks:
+      - agnet
+    restart: unless-stopped
+
+networks:
+  pynet:
+    name: agnet
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.12.0.0/24
