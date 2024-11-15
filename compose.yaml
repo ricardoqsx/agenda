@@ -17,20 +17,6 @@ services:
     depends_on:
       - agdb
 
-  agdb:
-    container_name: agdb
-    image: mariadb:latest
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-    env_file: .env
-    volumes:
-      - ./db:/var/lib/mysql
-    networks:
-      - agnet
-    restart: unless-stopped
-
 networks:
   pynet:
     name: agnet

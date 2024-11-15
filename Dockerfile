@@ -5,7 +5,10 @@ WORKDIR /app
 RUN apk add --no-cache \
     gcc \
     musl-dev \
-    mariadb-connector-c-dev \
+    libffi-dev \
+    sqlite-dev \
+    build-base \
+    openssl-dev \
     python3-dev
 
 COPY ./app .

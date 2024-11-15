@@ -1,4 +1,20 @@
 # app/db.py
+import sqlite3
+
+con = sqlite3.connect('contacts.db')
+cur = con.cursor()
+
+cur.execute(''' 
+create table if not exists contacts(
+    id integer primary key, 
+    user text not null,
+    mail text not null, 
+    assigned_number text, 
+    ext num)''')
+
+# ===================================
+
+'''
 import mariadb
 
 # datos de conexion a la base de datos
@@ -88,3 +104,6 @@ crear_bd()
 consulta()
 
 # Cerrar la conexión con la base de datos
+
+
+'''
