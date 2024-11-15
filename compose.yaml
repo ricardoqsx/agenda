@@ -14,11 +14,9 @@ services:
     restart: unless-stopped
     networks:
       - agnet
-    depends_on:
-      - agdb
 
 networks:
-  pynet:
+  agnet:
     name: agnet
     driver: bridge
     ipam:
