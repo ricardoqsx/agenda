@@ -8,7 +8,7 @@ services:
         limits:
           memory: 256M
     ports:
-      - 8100:5000
+      - 5000:5000
     volumes:
       - ./agenda:/agenda
     restart: unless-stopped
