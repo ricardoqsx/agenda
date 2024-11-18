@@ -163,3 +163,4 @@ cython_debug/
 
 # otros
 *.csv
+contacts.db

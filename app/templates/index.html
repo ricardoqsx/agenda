@@ -10,7 +10,7 @@
   </div>
 
   <div class="bg-dark py-4 px-4 text-bg-dark">
-    <h3>Cuentos que se encuentran actualmente en la base de datos</h3>
+    <h3>Agenda Telefonica</h3>
       <table border="1" class="table table-striped table-dark">
           <thead>
               <tr>
@@ -23,13 +23,13 @@
               </tr>
           </thead>
           <tbody style="text-align:left">
-              {% for ve in ver %}
+              {% for row in dbquery %}
                   <tr>
-                      <td scope="row">{{ ver[0] }}</td>
-                      <td scope="row">{{ ver[1] }}</td>
-                      <td scope="row">{{ ver[2] }}</td>
-                      <td scope="row">{{ ver[3] }}</td>
-                      <td scope="row">{{ ver[4] }}</td>
+                      <td scope="row">{{ row[0] }}</td>
+                      <td scope="row">{{ row[1] }}</td>
+                      <td scope="row">{{ row[2] }}</td>
+                      <td scope="row">{{ row[3] }}</td>
+                      <td scope="row">{{ row[4] }}</td>
                       <!-- Añade más columnas según tu tabla -->
                   </tr>
               {% endfor %}

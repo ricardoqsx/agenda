@@ -7,8 +7,8 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    ver=db.query()
-    return render_template('index.html', ver=ver)
+    dbquery=db.query()
+    return render_template('index.html', dbquery=dbquery)
 
 
 if __name__ == '__main__':
