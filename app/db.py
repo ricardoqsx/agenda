@@ -23,8 +23,10 @@ def create_db():
 
             if res[0]==0:
                 df = pd.read_csv('agenda.csv')
+                if 'id' in df.columns:
+                    df = df.drop(columns=['id'])
                 columns_to_insert = ['user', 'mail', 'assigned_number', 'ext']
-                df.to_sql('contacts', con, if_exists='replace', index=False)
+                df.to_sql('contacts', con, if_exists='append', index=False)
 
 def query():
     with get_conn() as con:
