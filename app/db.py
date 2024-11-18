@@ -20,7 +20,6 @@ def create_db():
         cur.execute("select count(*) from contacts")
         res=cur.fetchone()
         if res is not None:
-
             if res[0]==0:
                 df = pd.read_csv('agenda.csv')
                 if 'id' in df.columns:
