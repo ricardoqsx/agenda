@@ -1,16 +1,34 @@
 # app/db.py
+import pandas as pd
 import sqlite3
 
 con = sqlite3.connect('contacts.db')
 cur = con.cursor()
 
-cur.execute(''' 
-create table if not exists contacts(
-    id integer primary key, 
-    user text not null,
-    mail text not null, 
-    assigned_number text, 
-    ext num)''')
+def create_db():
+    cur.execute(''' 
+        create table if not exists contacts(
+        id integer primary key, 
+        user text not null,
+        mail text not null, 
+        assigned_number text, 
+        ext num)''')
+    cur.execute("select * from contacts")
+    res=cur.fetchone()
+    if res is not None:
+
+        if res[0]==0:
+            df = pd.read_csv('agenda.csv')
+            df.to_sql('contacts',conn, if_exists='replace', index=False)
+    con.close()
+
+def query():
+    cur.execute("Select * from contacts")
+    ttl = cur.fetchall()
+    return ttl
+
+
+
 
 # ===================================
 
