@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Jumbotron y Tabla</title>
+    <style>
+        .scrollable-table {
+            height: 400px; /* Ajusta la altura según sea necesario */
+            overflow-y: auto; /* Habilita el scroll vertical */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Jumbotron</h1>
+                <p class="lead">Este es un simple jumbotron para llamar la atención del usuario.</p>
+                <hr class="my-4">
+                <p>Utiliza este espacio para describir algo importante.</p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="scrollable-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Encabezado 1</th>
+                            <th>Encabezado 2</th>
+                            <th>Encabezado 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Agrega filas de ejemplo -->
+                        <tr>
+                            <td>Dato 1</td>
+                            <td>Dato 2</td>
+                            <td>Dato 3</td>
+                        </tr>
+                        <tr>
+                            <td>Dato 4</td>
+                            <td>Dato 5</td>
+                            <td>Dato 6</td>
+                        </tr>
+                        <!-- Repite según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
