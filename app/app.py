@@ -10,6 +10,10 @@ def index():
     dbquery=db.query()
     return render_template('index.html', dbquery=dbquery)
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 @app.route('/test1')
 def test1():
     return render_template('test1.html')

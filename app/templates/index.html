@@ -11,10 +11,10 @@
         <fieldset>
           <legend>Busqueda!</legend>
           <div class="mb-3">
-            <label for="TextInput" class="form-label">Escriba un nombre para empezar a buscar!</label>
+            <label for="TextInput" class="form-label">Escriba un nombre para empezar a buscar:</label>
             <input type="search" id="TextInput" class="form-control me-2" placeholder="Nombre / Apellido">
           </div>
-          <button type="submit" class="btn btn-outline-success">Buscar...</button>
+          <button type="submit" class="btn btn-outline-primary">Buscar...</button>
         </fieldset>
       </form>
   </div>
@@ -26,7 +26,8 @@
     <a type="button" class="btn btn-outline-warning py-1 px-1 col-3" href="#">Actualizar</a>
     <a type="button" class="btn btn-outline-danger py-1 px-1 col-3" href="#">Eliminar</a>
   </div>
-  <div class="scrollable-table">
+
+<div class="scrollable-table">
 <!-- tabla para mostrar los contactos -->
   <div class="bg-dark py-4 px-4 text-bg-dark rounded-2 opacity-75">
       <table border="1" class="table table-striped table-dark table-hover">
@@ -51,9 +52,9 @@
               {% endfor %}
           </tbody>
       </table>
+   </div>
   </div>
-  </div>
-</div>
+ </div>
 </div>
 
 {%endblock%}

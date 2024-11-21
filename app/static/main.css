@@ -7,10 +7,33 @@ body
 }
 
 
+
 .scrollable-table {
     height: 450px; /* Ajusta la altura según sea necesario */
     overflow-y: auto; /* Habilita el scroll vertical */
     margin-top: 16px;
     border-radius: 0.5rem; /* Redondea las esquinas */
-    border: 1px solid #920000; /* Agrega un borde para que se vea mejor */
+    border: 1px solid #000000; /* Agrega un borde para que se vea mejor */
+    scrollbar-width: thin; /* Para navegadores Firefox */
+    scrollbar-color: transparent transparent; /* Para navegadores Firefox */
     }
+
+    /* Para navegadores WebKit (Chrome, Safari) */
+.scrollable-table:-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    opacity: 0; /* Oculta la barra de desplazamiento */
+}
+
+.scrollable-table:-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    opacity: 0; /* Oculta la barra de desplazamiento */
+}
+
+.scrollable-tablehover::-webkit-scrollbar {
+    opacity: 1; /* Muestra la barra de desplazamiento al pasar el mouse */
+}
+
+.scrollable-table:-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
