@@ -12,19 +12,16 @@ def create_db():
         cur = con.cursor()
         cur.execute(''' 
             create table if not exists contacts(
-            id integer primary key autoincrement, 
+            ext integer primary key, 
             user text not null,
             mail text not null,
-            assigned_number text, 
-            ext num)''')
+            phone text)''')
         cur.execute("select count(*) from contacts")
         res=cur.fetchone()
         if res is not None:
             if res[0]==0:
                 df = pd.read_csv('agenda.csv')
-                if 'id' in df.columns:
-                    df = df.drop(columns=['id'])
-                columns_to_insert = ['user', 'mail', 'assigned_number', 'ext']
+                columns_to_insert = [ 'ext', 'user', 'mail', 'phone']
                 df.to_sql('contacts', con, if_exists='append', index=False)
 
 def query():
@@ -33,4 +30,14 @@ def query():
         cur.execute("Select * from contacts")
         total = cur.fetchall()
     return total
+
+def create_data(ex,us,ma,ph):
+    with get_conn() as con:
+        cur = con.cursor()
+        cur.execute("insert into contacts (ext, user, mail, phone) values (%s, %s, %s, %s)")
+
+def delete_data(ex):
+    with get_conn() as con:
+        cur = con.cursor()
+        cur.execute("delete from contacts where ext = %s",(ex))
 

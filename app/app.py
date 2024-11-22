@@ -18,6 +18,20 @@ def login():
 def test1():
     return render_template('test1.html')
 
+@app.route('/insert')
+def insert():
+    dbquery=db.query()
+    return render_template('crud/insert.html', dbquery=dbquery)
+
+@app.route('/update')
+def update():
+    dbquery=db.query()
+    return render_template('crud/update.html', dbquery=dbquery)
+
+@app.route('/delete')
+def delete():
+    dbquery=db.query()
+    return render_template('crud/delete.html', dbquery=dbquery)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port='5000')
