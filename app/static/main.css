@@ -20,6 +20,11 @@ body
     scrollbar-color: transparent transparent; /* Para navegadores Firefox */
     }
 
+.fit-insert {
+    margin-top: 16px;
+    height: 400px;
+}
+
     /* Para navegadores WebKit (Chrome, Safari) */
 .scrollable-table:-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */
