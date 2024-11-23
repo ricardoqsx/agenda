@@ -34,7 +34,8 @@ def query():
 def create_data(ex,us,ma,ph):
     with get_conn() as con:
         cur = con.cursor()
-        cur.execute("insert into contacts (ext, user, mail, phone) values (%s, %s, %s, %s)")
+        inser_data= "insert into contacts (ext, user, mail, phone) values (%s, %s, %s, %s)"
+        cur.execute(inser_data,(ex, us, ma, ph))
 
 def delete_data(ex):
     with get_conn() as con:
