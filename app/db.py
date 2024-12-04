@@ -43,3 +43,10 @@ def delete_data(ex):
         for ext in ex:
             cur.execute("delete from contacts where ext = ?",(ex))
 
+def search_data(val):
+    with get_conn() as con:
+        cur = con.cursor()
+        cur.execute("select * from contacts where user like ?",('%'+val+'%'))
+        total = cur.fetchall()
+        return total
+
