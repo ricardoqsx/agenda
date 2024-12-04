@@ -27,18 +27,19 @@ def create_db():
 def query():
     with get_conn() as con:
         cur = con.cursor()
-        cur.execute("Select * from contacts")
+        cur.execute("Select * from contacts order by user asc")
         total = cur.fetchall()
     return total
 
 def create_data(ex,us,ma,ph):
     with get_conn() as con:
         cur = con.cursor()
-        inser_data= "insert into contacts (ext, user, mail, phone) values (%s, %s, %s, %s)"
+        inser_data= "insert into contacts (ext, user, mail, phone) values (?, ?, ?, ?)"
         cur.execute(inser_data,(ex, us, ma, ph))
 
 def delete_data(ex):
     with get_conn() as con:
         cur = con.cursor()
-        cur.execute("delete from contacts where ext = %s",(ex))
+        for ext in ex:
+            cur.execute("delete from contacts where ext = ?",(ex))
 

@@ -37,8 +37,12 @@ def update():
     frontquery=db.query()
     return render_template('crud/update.html', frontquery=frontquery)
 
-@app.route('/delete')
+@app.route('/delete', methods=['GET', 'POST'])
 def delete():
+    if request.method=='POST':
+        ex=request.form.getlist('ext')
+        db.delete_data(ex)
+        return redirect(url_for('delete'))
     frontquery=db.query()
     return render_template('crud/delete.html', frontquery=frontquery)
 
