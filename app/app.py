@@ -31,7 +31,6 @@ def insert():
         user = request.form['user']
         mail = request.form['mail']
         phone = request.form['phone']
-        # insercion en la BD
         db.create_data(ext, user, mail, phone)
         return redirect(url_for('insert'))
     frontquery=db.query()
