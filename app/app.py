@@ -37,13 +37,19 @@ def insert():
     frontquery=db.query()
     return render_template('crud/insert.html', frontquery=frontquery)
 
-@app.route('/update')
+@app.route('/update', methods=['GET', 'POST'])
 def update():
-    query = request.args.get('query','')
-    if query:
-        frontquery=db.search_data(query)
-    else:
-        frontquery=db.query()
+    if request.method == 'POST':
+        selected_exts = request.form.getlist('ext')
+        for ext in selected_exts:
+            user = request.form.get(f'user_{ext}')
+            mail = request.form.get(f'mail_{ext}')
+            phone = request.form.get(f'phone_{ext}')
+            db.update_data(user, mail, phone, ext)
+        return redirect(url_for('update'))
+
+    query = request.args.get('query', '')
+    frontquery = db.search_data(query) if query else db.query()
     return render_template('crud/update.html', frontquery=frontquery)
 
 @app.route('/delete', methods=['GET', 'POST'])

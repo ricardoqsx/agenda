@@ -44,10 +44,10 @@
           <tbody style="text-align:left">
               {% for row in frontquery %}
                   <tr>
-                      <td scope="row">{{ row[0] }}</td>
-                      <td scope="row">{{ row[1] }}</td>
-                      <td scope="row">{{ row[2] }}</td>
-                      <td scope="row">{{ row[3] }}</td>
+                    <td><input class="form-check-input" type="checkbox" name="ext" value="{{ row[0] }}"></td>
+                      <td scope="row"><input class="form-control bg-dark text-light" type="text" name="user_{{ row[0] }}" value="{{ row[1] }}"></td>
+                      <td scope="row"><input class="form-control bg-dark text-light" type="email" name="mail_{{ row[0] }}" value="{{ row[2] }}"></td>
+                      <td scope="row"><input class="form-control bg-dark text-light" type="phone" name="phone_{{ row[0] }}" value="{{ row[3] }}"></td>
                       <!-- Añade más columnas según tu tabla -->
                   </tr>
               {% endfor %}

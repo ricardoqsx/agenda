@@ -31,22 +31,39 @@ def query():
         total = cur.fetchall()
     return total
 
-def create_data(ex,us,ma,ph):
-    with get_conn() as con:
-        cur = con.cursor()
-        inser_data= "insert into contacts (ext, user, mail, phone) values (?, ?, ?, ?)"
-        cur.execute(inser_data,(ex, us, ma, ph))
-
-def delete_data(ex):
-    with get_conn() as con:
-        cur = con.cursor()
-        for ext in ex:
-            cur.execute("delete from contacts where ext = ?",(ex))
-
 def search_data(val):
     with get_conn() as con:
         cur = con.cursor()
         cur.execute("select * from contacts where user like ?",('%'+val+'%',))
         total = cur.fetchall()
     return total
+
+def create_data(ex,us,ma,ph):
+    with get_conn() as con:
+        cur = con.cursor()
+        inser_data= "insert into contacts (ext, user, mail, phone) values (?, ?, ?, ?)"
+        cur.execute(inser_data,(ex, us, ma, ph))
+
+def update_data(us, ma, ph, ex):
+    with get_conn() as con:
+        cur = con.cursor()
+        upd = ''' update contacts 
+                    set user =?, 
+                    mail = ?, 
+                    phone = ? 
+                  where ext = ?
+              '''
+        cur.execute(upd,(us, ma, ph, ex))
+
+def delete_data(ex):
+    with get_conn() as con:
+        cur = con.cursor()
+        for ext in ex:
+            cur.execute("delete from contacts where ext = ?", (ext,))
+
+# anotacion sobre for
+# en la funcion, ex funciona como una lista 
+# que va tomando los datos en la lista (que tiene ex) 
+# y le va pasando a ext y entonces 
+# el valor de ext se le va pasando al query
 
