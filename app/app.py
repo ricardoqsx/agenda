@@ -7,7 +7,11 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    frontquery=db.query()
+    query = request.args.get('query','')
+    if query:
+        frontquery=db.search_data(query)
+    else:
+        frontquery=db.query()
     return render_template('index.html', frontquery=frontquery)
 
 @app.route('/login')
@@ -15,6 +19,7 @@ def login():
     return render_template('login.html')
 
 @app.route('/test1')
+# esto es un playground para pruebas
 def test1():
     return render_template('test1.html')
 
@@ -34,7 +39,11 @@ def insert():
 
 @app.route('/update')
 def update():
-    frontquery=db.query()
+    query = request.args.get('query','')
+    if query:
+        frontquery=db.search_data(query)
+    else:
+        frontquery=db.query()
     return render_template('crud/update.html', frontquery=frontquery)
 
 @app.route('/delete', methods=['GET', 'POST'])
@@ -43,7 +52,11 @@ def delete():
         ex=request.form.getlist('ext')
         db.delete_data(ex)
         return redirect(url_for('delete'))
-    frontquery=db.query()
+    query = request.args.get('query','')
+    if query:
+        frontquery=db.search_data(query)
+    else:
+        frontquery=db.query()
     return render_template('crud/delete.html', frontquery=frontquery)
 
 if __name__ == '__main__':

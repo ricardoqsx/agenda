@@ -7,12 +7,12 @@
 <!-- jumbotrom con titulos y asi -->
 <div class="bg-dark text-light py-3 px-3 box rounded-2 m-3 opacity-75" data-bs-theme="dark">
     <h1 class="display-4 text-warning">Agenda de contactos</h1>
-    <form class="d-flex" role="search"">
+    <form class="d-flex" role="search" method="GET" action="{{url_for('update')}}">
         <fieldset>
           <legend class="text-warning">Busqueda!</legend>
           <div class="mb-3">
             <label for="TextInput" class="form-label text-warning">Escriba un nombre que quieras actualizar:</label>
-            <input type="search" id="TextInput" class="form-control me-2" placeholder="Nombre / Apellido">
+            <input type="search" name="query" id="TextInput" class="form-control me-2" placeholder="Nombre / Apellido">
           </div>
           <button type="submit" class="btn btn-outline-primary">Buscar...</button>
         </fieldset>

@@ -46,7 +46,7 @@ def delete_data(ex):
 def search_data(val):
     with get_conn() as con:
         cur = con.cursor()
-        cur.execute("select * from contacts where user like ?",('%'+val+'%'))
+        cur.execute("select * from contacts where user like ?",('%'+val+'%',))
         total = cur.fetchall()
-        return total
+    return total
 
