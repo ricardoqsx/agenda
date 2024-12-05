@@ -15,3 +15,4 @@ agenda telefonica sencilla lista para deploy
 - teniendo docker instalado (si no lo tienen instalado, instalar bajo [estas instrucciones](https://docs.docker.com/engine/install/) )
 - ejecutar `docker compose up -d`
 - acceder mediante: `localhost:5000`
+- enjoy :)
