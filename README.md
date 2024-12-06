@@ -5,7 +5,9 @@ agenda telefonica sencilla lista para deploy
 
 - Docker
 - Python
-- una base de datos (por definir si SQLite o Mariadb)
+- SQLite
+- HTML
+- CSS
 
 ## instrucciones (temporales) de uso:
 
@@ -16,3 +18,9 @@ agenda telefonica sencilla lista para deploy
 - ejecutar `docker compose up -d`
 - acceder mediante: `localhost:5000`
 - enjoy :)
+
+# Proximas caracteristicas!
+
+- Login
+- adm de usuarios
+- conexiones seguras
