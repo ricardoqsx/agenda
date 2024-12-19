@@ -31,7 +31,9 @@ def insert():
         user = request.form['user']
         mail = request.form['mail']
         phone = request.form['phone']
-        db.create_data(ext, user, mail, phone)
+        site = request.form['site']
+        department = request.form['department']
+        db.create_data(ext, user, mail, phone, site, department)
         return redirect(url_for('insert'))
     frontquery=db.query()
     return render_template('crud/insert.html', frontquery=frontquery)
@@ -44,7 +46,9 @@ def update():
             user = request.form.get(f'user_{ext}')
             mail = request.form.get(f'mail_{ext}')
             phone = request.form.get(f'phone_{ext}')
-            db.update_data(user, mail, phone, ext)
+            site = request.form.get(f'site_{ext}')
+            department = request.form.get(f'department_{ext}')
+            db.update_data(user, mail, phone, site, department, ext)
         return redirect(url_for('update'))
 
     query = request.args.get('query', '')
