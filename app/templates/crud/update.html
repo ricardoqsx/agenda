@@ -38,6 +38,8 @@
                   <th>Usuario</th>
                   <th>Correo</th>
                   <th>Telefono</th>
+                  <th>Regional</th>
+                  <th>Departamento</th>
                   <!-- Añade más columnas según tu tabla -->
               </tr>
           </thead>
@@ -48,6 +50,8 @@
                       <td scope="row"><input class="form-control bg-dark text-warning" type="text" name="user_{{ row[0] }}" value="{{ row[1] }}"></td>
                       <td scope="row"><input class="form-control bg-dark text-warning" type="email" name="mail_{{ row[0] }}" value="{{ row[2] }}"></td>
                       <td scope="row"><input class="form-control bg-dark text-warning" type="phone" name="phone_{{ row[0] }}" value="{{ row[3] }}"></td>
+                      <td scope="row"><input class="form-control bg-dark text-warning" type="site" name="site_{{ row[0] }}" value="{{ row[4] }}"></td>
+                      <td scope="row"><input class="form-control bg-dark text-warning" type="department" name="department_{{ row[0] }}" value="{{ row[5] }}"></td>
                       <!-- Añade más columnas según tu tabla -->
                   </tr>
               {% endfor %}

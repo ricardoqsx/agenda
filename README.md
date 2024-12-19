@@ -24,6 +24,9 @@ agenda telefonica sencilla lista para deploy
 - Login
 - adm de usuarios
 - conexiones seguras
+<<<<<<< HEAD
 
 - Agregar departamentos, puestos y mas filtros
 - comenzar a crear calendarios
+=======
+>>>>>>> aba263b8b277f0e6cabaff73133286abed2983b5
