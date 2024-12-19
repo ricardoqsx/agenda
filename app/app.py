@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import db
+import calendar
+from datetime import datetime
 
 db.create_db()
 
@@ -21,7 +23,17 @@ def login():
 @app.route('/test1')
 # esto es un playground para pruebas
 def test1():
-    return render_template('test1.html')
+    # Obtén el mes y año actuales
+    today = datetime.today()
+    year = today.year
+    month = today.month
+
+    # Genera un calendario del mes en formato HTML
+    cal = calendar.HTMLCalendar(calendar.SUNDAY)  # Inicia semanas el domingo
+    calendar_html = cal.formatmonth(year, month)
+
+    # Renderiza la plantilla pasando el calendario generado
+    return render_template("test1.html", calendar_html=calendar_html, year=year, month=month)
 
 @app.route('/insert', methods=['GET', 'POST'])
 def insert():
