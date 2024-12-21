@@ -40,6 +40,13 @@ def search_data(val):
         total = cur.fetchall()
     return total
 
+def dep_data():
+    with get_conn() as con:
+        cur = con.cursor()
+        cur.execute("select departments from contacts")
+        total = cur.fetchall()
+    return total
+
 def create_data(ex,us,ma,ph,st,dp):
     with get_conn() as con:
         cur = con.cursor()

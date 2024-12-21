@@ -20,20 +20,16 @@ def index():
 def login():
     return render_template('login.html')
 
-@app.route('/test1')
-# esto es un playground para pruebas
-def test1():
-    # Obtén el mes y año actuales
-    today = datetime.today()
-    year = today.year
-    month = today.month
+@app.route('/calendario/<int:year>/<int:month>')
+def calendario(year, month):
+    # Crear el calendario para el mes y año dados
+    cal = calendar.Calendar()
+    month_days = cal.monthdayscalendar(year, month)
 
-    # Genera un calendario del mes en formato HTML
-    cal = calendar.HTMLCalendar(calendar.SUNDAY)  # Inicia semanas el domingo
-    calendar_html = cal.formatmonth(year, month)
+    # Nombres de los días de la semana
+    day_names = list(calendar.day_name)
 
-    # Renderiza la plantilla pasando el calendario generado
-    return render_template("test1.html", calendar_html=calendar_html, year=year, month=month)
+    return render_template('cal.html', month=month, year=year, days=month_days, day_names=day_names)
 
 @app.route('/insert', methods=['GET', 'POST'])
 def insert():
