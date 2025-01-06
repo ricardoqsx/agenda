@@ -1,11 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for
-import db
-import calendar
 from datetime import datetime
+import calendar
+import db
+from config import config
 
 db.create_db()
 
 app=Flask(__name__)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method=='POST':
+        print(request.form['user'])
+        print(request.form['pass'])
+        return render_template('login.html')
+    else:
+        return render_template('login.html')
 
 @app.route('/')
 def index():
@@ -15,10 +25,6 @@ def index():
     else:
         frontquery=db.query()
     return render_template('index.html', frontquery=frontquery)
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
 
 @app.route('/calendario/<int:year>/<int:month>')
 def calendario(year, month):
@@ -77,4 +83,5 @@ def delete():
     return render_template('crud/delete.html', frontquery=frontquery)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port='5500')
+    app.config.from_object(config['dev'])
+    app.run(host='0.0.0.0', port='5500')

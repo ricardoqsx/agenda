@@ -8,16 +8,16 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                <form action="/login" method="POST">                        <!-- begin form-->
                     <h2>Admin Access</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" required>
+                        <input type="text" name="user" required>
                         <label for="">User</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" name="pass" required>
                         <label for="">Password</label>
                     </div>
                     <div class="forget">

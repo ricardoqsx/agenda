@@ -162,6 +162,7 @@ cython_debug/
 #.idea/
 
 # others
+.vscode/
 .env/
 agenda.csv
 contacts.db

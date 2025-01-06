@@ -2,6 +2,24 @@
 import pandas as pd
 import sqlite3
 
+# users table operations
+
+usrdb = 'users.db'
+
+def conn_usr():
+    return sqlite3.connect(usrdb)
+
+with conn_usr() as users:
+    cur = users.cursor()
+    cur.execute('''
+        create table if not exists users(
+        id integer primary key autoincrement,
+        username text not null,
+        password text not null,
+        fullname text not null)''')
+
+# CRUD operations
+
 db = 'contacts.db'
 
 def get_conn():
