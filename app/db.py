@@ -18,9 +18,19 @@ def create_users():
             username text not null,
             password text not null,
             fullname text not null)''')
+        cur.execute("select count(*) from users")
+        rs=cur.fetchone()
+        if rs is not None:
+            if rs[0]==0:
+                user_create = "insert into users (username, password, fullname) values (?, ?, ?)"
+                username = "ricardoqsx"
+                password = "scrypt:32768:8:1$uvmv05ggdxjtJmfp$c4b985fb135f9a1bf9b3b9260a8a9ddc4e89e89a000d1b2410247e462407cb07520011f14ef3d92f0c5155fc6e6ddf51c237a0f3316c46bc77a1fdead7fc4dbb"
+                fullname = "Ricardo Quiroz Serrano"
+                cur.execute(user_create,(username, password, fullname))
 
-
-# CRUD operations
+# //////////////////////////////////////////////////////////////////////////////////////////////
+# CRUD operations //////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////
 
 db = 'contacts.db'
 
