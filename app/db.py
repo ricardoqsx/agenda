@@ -26,38 +26,34 @@ def create_users():
                 user_create = "insert into users (username, password, fullname) values (?, ?, ?)"
                 # usuario de prueba
                 username = "test"
-                password = "scrypt:32768:8:1$uvmv05ggdxjtJmfp$c4b985fb135f9a1bf9b3b9260a8a9ddc4e89e89a000d1b2410247e462407cb07520011f14ef3d92f0c5155fc6e6ddf51c237a0f3316c46bc77a1fdead7fc4dbb"
+                password = "scrypt:32768:8:1$uvmv05ggdxjtJmfp$scrypt:32768:8:1$VZCDJmJLswoxjFV9$507dada3f16d5de94367d986658942ea9be4d0ffae8932eeb513749b69286e6bd436bed73df9b9dc4a9577cdf3cb635a1ee3d0f019ebef5450a2083c605c8595"
                 fullname = "Testing User"
                 cur.execute(user_create,(username, password, fullname))
 
-class ModelUser():
 
-    @classmethod
-    def login(self, db, user):
-        with conn_usr() as users:
-            cur = users.cursor()
-            sql = """SELECT id, username, password, fullname FROM users 
-                    WHERE username = '{}'""".format(user.username)
-            cur.execute(sql)
-            row = cur.fetchone()
-            if row != None:
-                user = User(row[0], row[1], User.check_password(row[2], user.password), row[3])
-                return user
-            else:
-                return None
+def login(user):
+    with conn_usr() as users:
+        cur = users.cursor()
+        sql = """SELECT id, username, password, fullname FROM users 
+                WHERE username = '{}'""".format(user.username)
+        cur.execute(sql)
+        row = cur.fetchone()
+        if row != None:
+            user = User(row[0], row[1], User.check_password(row[2], user.password), row[3])
+            return user
+        else:
+            return None
 
-
-    @classmethod
-    def get_by_id(self, db, id):
-        with conn_usr() as users:
-            cur = users.cursor()
-            sql = "SELECT id, username, fullname FROM users WHERE id = {}".format(id)
-            cur.execute(sql)
-            row = cur.fetchone()
-            if row != None:
-                return User(row[0], row[1], None, row[2])
-            else:
-                return None
+def get_by_id(id):
+    with conn_usr() as users:
+        cur = users.cursor()
+        sql = "SELECT id, username, fullname FROM users WHERE id = {}".format(id)
+        cur.execute(sql)
+        row = cur.fetchone()
+        if row != None:
+            return User(row[0], row[1], None, row[2])
+        else:
+            return None
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////

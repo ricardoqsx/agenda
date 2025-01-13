@@ -11,6 +11,7 @@
                 <form action="/login" method="POST">                        <!-- begin form-->
                     <h2>Admin Access</h2>
                     <div class="inputbox">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                         <ion-icon name="mail-outline"></ion-icon>
                         <input type="text" name="user" required>
                         <label for="">User</label>

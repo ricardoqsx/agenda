@@ -167,3 +167,4 @@ cython_debug/
 agenda.csv
 users.db
 contacts.db
+secret.py
