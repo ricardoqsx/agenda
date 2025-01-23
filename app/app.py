@@ -7,6 +7,7 @@ import calendar
 import db
 
 db.create_db()
+db.create_users()
 
 app=Flask(__name__)
 
@@ -21,7 +22,7 @@ def load_user(id):
 def login():
     if request.method == 'POST':
         user = db.User(0, request.form['user'], request.form['pass'])
-        logged_user = db.login(db, user)
+        logged_user = db.login(user)
         if logged_user != None:
             if logged_user.password:
                 login_user(logged_user)
