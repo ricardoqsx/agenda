@@ -27,3 +27,4 @@ agenda telefonica sencilla lista para deploy
 - Agregar departamentos, puestos y mas filtros
 - comenzar a crear calendarios
 
+...

@@ -75,7 +75,7 @@ def insert():
         db.create_data(ext, user, mail, phone, site, department)
         return redirect(url_for('insert'))
     frontquery=db.query()
-    return render_template('crud/insert.html', frontquery=frontquery)
+    return render_template('admin/insert.html', frontquery=frontquery)
 
 @app.route('/update', methods=['GET', 'POST'])
 @login_required
@@ -93,7 +93,7 @@ def update():
 
     query = request.args.get('query', '')
     frontquery = db.search_data(query) if query else db.query()
-    return render_template('crud/update.html', frontquery=frontquery)
+    return render_template('admin/update.html', frontquery=frontquery)
 
 @app.route('/delete', methods=['GET', 'POST'])
 @login_required
@@ -107,7 +107,7 @@ def delete():
         frontquery=db.search_data(query)
     else:
         frontquery=db.query()
-    return render_template('crud/delete.html', frontquery=frontquery)
+    return render_template('admin/delete.html', frontquery=frontquery)
 
 def status_401(error):
     return redirect(url_for('login'))
