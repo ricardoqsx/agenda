@@ -1,11 +1,12 @@
 # Agenda:1.0
-agenda telefonica sencilla lista para deploy
+agenda telefonica sencilla con busqueda lista para deploy con datos de prueba
 
 ## Tecnologias
 
 - Docker
 - Python
 - SQLite
+- Flask
 - HTML
 - CSS
 
@@ -19,12 +20,6 @@ agenda telefonica sencilla lista para deploy
 - acceder mediante: `localhost:5000`
 - enjoy :)
 
-# Proximas caracteristicas!
 
-- Login
-- adm de usuarios
-- conexiones seguras
-- Agregar departamentos, puestos y mas filtros
-- comenzar a crear calendarios
 
 ...

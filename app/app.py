@@ -62,7 +62,6 @@ def calendario(year, month):
     return render_template('cal.html', month=month, year=year, days=month_days, day_names=day_names)
 
 @app.route('/insert', methods=['GET', 'POST'])
-@login_required
 def insert():
     if request.method == 'POST':
         # recibe datos del formulario
@@ -78,7 +77,6 @@ def insert():
     return render_template('admin/insert.html', frontquery=frontquery)
 
 @app.route('/update', methods=['GET', 'POST'])
-@login_required
 def update():
     if request.method == 'POST':
         selected_exts = request.form.getlist('ext')
@@ -96,7 +94,6 @@ def update():
     return render_template('admin/update.html', frontquery=frontquery)
 
 @app.route('/delete', methods=['GET', 'POST'])
-@login_required
 def delete():
     if request.method=='POST':
         ex=request.form.getlist('ext')

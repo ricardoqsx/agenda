@@ -1,0 +1,151 @@
+ext,user,mail,phone,site,department
+1001,Juan Pérez,jperez@example.com,612-3456,Panamá,Ventas
+1002,María González,mgonzalez@example.com,623-4567,Colón,Recursos Humanos
+1003,Carlos Rodríguez,crodriguez@example.com,634-5678,Chiriquí,TI
+1004,Ana Martínez,amartinez@example.com,645-6789,Panamá,Contabilidad
+1005,Luis García,lgarcia@example.com,656-7890,Veraguas,Marketing
+1006,Laura López,llopez@example.com,667-8901,Panamá,Operaciones
+1007,Pedro Hernández,phernandez@example.com,678-9012,Bocas del Toro,Ventas
+1008,Sofía Díaz,sdiaz@example.com,689-0123,Colón,Recursos Humanos
+1009,José Ramírez,jramirez@example.com,690-1234,Chiriquí,TI
+1010,Carmen Torres,ctorres@example.com,601-2345,Panamá,Contabilidad
+1011,Miguel Flores,mflores@example.com,612-3456,Veraguas,Marketing
+1012,Elena Ruiz,eruiz@example.com,623-4567,Panamá,Operaciones
+1013,Roberto Vargas,rvargas@example.com,634-5678,Bocas del Toro,Ventas
+1014,Isabel Castro,icastro@example.com,645-6789,Colón,Recursos Humanos
+1015,Francisco Morales,fmorales@example.com,656-7890,Chiriquí,TI
+1016,Patricia Ortega,portega@example.com,667-8901,Panamá,Contabilidad
+1017,Antonio Silva,asilva@example.com,678-9012,Veraguas,Marketing
+1018,Rosa Mendoza,rmendoza@example.com,689-0123,Panamá,Operaciones
+1019,Jorge Rojas,jrojas@example.com,690-1234,Bocas del Toro,Ventas
+1020,Teresa Medina,tmedina@example.com,601-2345,Colón,Recursos Humanos
+1021,Daniel Herrera,dherrera@example.com,612-3456,Chiriquí,TI
+1022,Verónica Castro,vcastro@example.com,623-4567,Panamá,Contabilidad
+1023,Ricardo Peña,rpeña@example.com,634-5678,Veraguas,Marketing
+1024,Gabriela Ríos,gríos@example.com,645-6789,Panamá,Operaciones
+1025,Eduardo Mora,emora@example.com,656-7890,Bocas del Toro,Ventas
+1026,Beatriz Guzmán,bguzmán@example.com,667-8901,Colón,Recursos Humanos
+1027,Fernando Soto,fsoto@example.com,678-9012,Chiriquí,TI
+1028,Adriana Reyes,areyes@example.com,689-0123,Panamá,Contabilidad
+1029,Arturo Delgado,adelgado@example.com,690-1234,Veraguas,Marketing
+1030,Sandra Navarro,snavarro@example.com,601-2345,Panamá,Operaciones
+1031,Manuel Jiménez,mjiménez@example.com,612-3456,Bocas del Toro,Ventas
+1032,Claudia Vega,cvega@example.com,623-4567,Colón,Recursos Humanos
+1033,Óscar Paredes,oparedes@example.com,634-5678,Chiriquí,TI
+1034,Natalia Cordero,ncordero@example.com,645-6789,Panamá,Contabilidad
+1035,Andrés Salas,asalas@example.com,656-7890,Veraguas,Marketing
+1036,Monica Rivas,mrivas@example.com,667-8901,Panamá,Operaciones
+1037,Raúl Cabrera,rcabrera@example.com,678-9012,Bocas del Toro,Ventas
+1038,Lucía Valdez,lvaldez@example.com,689-0123,Colón,Recursos Humanos
+1039,Víctor Mejía,vmejía@example.com,690-1234,Chiriquí,TI
+1040,Elena Ponce,eponce@example.com,601-2345,Panamá,Contabilidad
+1041,Mario Santana,msantana@example.com,612-3456,Veraguas,Marketing
+1042,Susana Franco,sfranco@example.com,623-4567,Panamá,Operaciones
+1043,Alberto Rangel,arangel@example.com,634-5678,Bocas del Toro,Ventas
+1044,Carolina Miranda,cmiranda@example.com,645-6789,Colón,Recursos Humanos
+1045,José Luis Acosta,jacosta@example.com,656-7890,Chiriquí,TI
+1046,Marina Solís,msolís@example.com,667-8901,Panamá,Contabilidad
+1047,Rafael Montes,rmontes@example.com,678-9012,Veraguas,Marketing
+1048,Gloria Campos,gcampos@example.com,689-0123,Panamá,Operaciones
+1049,Enrique León,eleón@example.com,690-1234,Bocas del Toro,Ventas
+1050,Silvia Espinoza,sespinoza@example.com,601-2345,Colón,Recursos Humanos
+1051,Diego Maldonado,dmaldonado@example.com,612-3456,Chiriquí,TI
+1052,Olga Cervantes,ocervantes@example.com,623-4567,Panamá,Contabilidad
+1053,Guillermo Rivas,grivas@example.com,634-5678,Veraguas,Marketing
+1054,Paola Escobar,pescobar@example.com,645-6789,Panamá,Operaciones
+1055,Roberto Andrade,randrade@example.com,656-7890,Bocas del Toro,Ventas
+1056,Tania Montes,tmontes@example.com,667-8901,Colón,Recursos Humanos
+1057,Sergio Bravo,sbravo@example.com,678-9012,Chiriquí,TI
+1058,Marisol Lara,mlara@example.com,689-0123,Panamá,Contabilidad
+1059,Felipe Orozco,forozco@example.com,690-1234,Veraguas,Marketing
+1060,Diana Paredes,dparedes@example.com,601-2345,Panamá,Operaciones
+1061,Ernesto Vega,evega@example.com,612-3456,Bocas del Toro,Ventas
+1062,Alejandra Mora,amora@example.com,623-4567,Colón,Recursos Humanos
+1063,Rodrigo Salazar,rsalazar@example.com,634-5678,Chiriquí,TI
+1064,Gabriel Rojas,grojas@example.com,645-6789,Panamá,Contabilidad
+1065,Vanessa Cordero,vcordero@example.com,656-7890,Veraguas,Marketing
+1066,Héctor Medina,hmedina@example.com,667-8901,Panamá,Operaciones
+1067,Lorena Vargas,lvargas@example.com,678-9012,Bocas del Toro,Ventas
+1068,Javier Castro,jcastro@example.com,689-0123,Colón,Recursos Humanos
+1069,Ana María Reyes,areyes2@example.com,690-1234,Chiriquí,TI
+1070,César Ortega,cortega@example.com,601-2345,Panamá,Contabilidad
+1071,Margarita Silva,msilva@example.com,612-3456,Veraguas,Marketing
+1072,Ricardo Mendoza,rmendoza2@example.com,623-4567,Panamá,Operaciones
+1073,Gloria Ríos,gríos2@example.com,634-5678,Bocas del Toro,Ventas
+1074,Óscar Martínez,omartínez@example.com,645-6789,Colón,Recursos Humanos
+1075,Sonia Herrera,sherrera@example.com,656-7890,Chiriquí,TI
+1076,Alfredo Peña,apeña@example.com,667-8901,Panamá,Contabilidad
+1077,Cecilia Guzmán,cguzmán@example.com,678-9012,Veraguas,Marketing
+1078,Ramón Soto,rsoto@example.com,689-0123,Panamá,Operaciones
+1079,Patricia Delgado,pdelgado@example.com,690-1234,Bocas del Toro,Ventas
+1080,Manuel Navarro,mnavarro@example.com,601-2345,Colón,Recursos Humanos
+1081,Adriana Jiménez,ajiménez@example.com,612-3456,Chiriquí,TI
+1082,Fernando Vega,fvega@example.com,623-4567,Panamá,Contabilidad
+1083,Sandra Paredes,sparedes@example.com,634-5678,Veraguas,Marketing
+1084,Arturo Cordero,acordero@example.com,645-6789,Panamá,Operaciones
+1085,Claudia Salas,csalas@example.com,656-7890,Bocas del Toro,Ventas
+1086,Óscar Rivas,orivas@example.com,667-8901,Colón,Recursos Humanos
+1087,Natalia Cabrera,ncabrera@example.com,678-9012,Chiriquí,TI
+1088,Andrés Valdez,avaldez@example.com,689-0123,Panamá,Contabilidad
+1089,Monica Mejía,mmejía@example.com,690-1234,Veraguas,Marketing
+1090,Raúl Ponce,rponce@example.com,601-2345,Panamá,Operaciones
+1091,Lucía Santana,lsantana@example.com,612-3456,Bocas del Toro,Ventas
+1092,Víctor Franco,vfranco@example.com,623-4567,Colón,Recursos Humanos
+1093,Elena Rangel,erangel@example.com,634-5678,Chiriquí,TI
+1094,Mario Miranda,mmiranda@example.com,645-6789,Panamá,Contabilidad
+1095,Susana Acosta,sacosta@example.com,656-7890,Veraguas,Marketing
+1096,Alberto Solís,asolís@example.com,667-8901,Panamá,Operaciones
+1097,Carolina Montes,cmontes@example.com,678-9012,Bocas del Toro,Ventas
+1098,José Luis Campos,jcampos@example.com,689-0123,Colón,Recursos Humanos
+1099,Marina León,mleón@example.com,690-1234,Chiriquí,TI
+1100,Rafael Espinoza,respinoza@example.com,601-2345,Panamá,Contabilidad
+1101,Gloria Maldonado,gmaldonado@example.com,612-3456,Veraguas,Marketing
+1102,Enrique Cervantes,ecervantes@example.com,623-4567,Panamá,Operaciones
+1103,Silvia Rivas,srivas@example.com,634-5678,Bocas del Toro,Ventas
+1104,Diego Escobar,descobar@example.com,645-6789,Colón,Recursos Humanos
+1105,Olga Andrade,oandrade@example.com,656-7890,Chiriquí,TI
+1106,Guillermo Montes,gmontes@example.com,667-8901,Panamá,Contabilidad
+1107,Paola Bravo,pbravo@example.com,678-9012,Veraguas,Marketing
+1108,Roberto Lara,rlara@example.com,689-0123,Panamá,Operaciones
+1109,Tania Orozco,torozco@example.com,690-1234,Bocas del Toro,Ventas
+1110,Sergio Paredes,sparedes2@example.com,601-2345,Colón,Recursos Humanos
+1111,Marisol Vega,mvega@example.com,612-3456,Chiriquí,TI
+1112,Felipe Mora,fmora@example.com,623-4567,Panamá,Contabilidad
+1113,Diana Salazar,dsalazar@example.com,634-5678,Veraguas,Marketing
+1114,Ernesto Rojas,erojas@example.com,645-6789,Panamá,Operaciones
+1115,Alejandra Cordero,acordero2@example.com,656-7890,Bocas del Toro,Ventas
+1116,Rodrigo Medina,rmedina@example.com,667-8901,Colón,Recursos Humanos
+1117,Gabriel Vargas,gvargas@example.com,678-9012,Chiriquí,TI
+1118,Vanessa Castro,vcastro2@example.com,689-0123,Panamá,Contabilidad
+1119,Héctor Ortega,hortega@example.com,690-1234,Veraguas,Marketing
+1120,Lorena Silva,lsilva@example.com,601-2345,Panamá,Operaciones
+1121,Javier Mendoza,jmendoza@example.com,612-3456,Bocas del Toro,Ventas
+1122,Ana María Ríos,aríos@example.com,623-4567,Colón,Recursos Humanos
+1123,César Martínez,cmartínez@example.com,634-5678,Chiriquí,TI
+1124,Margarita Herrera,mherrera@example.com,645-6789,Panamá,Contabilidad
+1125,Ricardo Peña,rpeña2@example.com,656-7890,Veraguas,Marketing
+1126,Gloria Guzmán,gguzmán@example.com,667-8901,Panamá,Operaciones
+1127,Óscar Soto,osoto@example.com,678-9012,Bocas del Toro,Ventas
+1128,Sonia Delgado,sdelgado@example.com,689-0123,Colón,Recursos Humanos
+1129,Alfredo Navarro,anavarro@example.com,690-1234,Chiriquí,TI
+1130,Cecilia Jiménez,cjiménez@example.com,601-2345,Panamá,Contabilidad
+1131,Ramón Vega,rvega@example.com,612-3456,Veraguas,Marketing
+1132,Patricia Paredes,pparedes@example.com,623-4567,Panamá,Operaciones
+1133,Manuel Cordero,mcordero@example.com,634-5678,Bocas del Toro,Ventas
+1134,Adriana Salas,asalas2@example.com,645-6789,Colón,Recursos Humanos
+1135,Fernando Rivas,frivas@example.com,656-7890,Chiriquí,TI
+1136,Sandra Cabrera,scabrera@example.com,667-8901,Panamá,Contabilidad
+1137,Arturo Valdez,avaldez2@example.com,678-9012,Veraguas,Marketing
+1138,Claudia Mejía,cmejía@example.com,689-0123,Panamá,Operaciones
+1139,Óscar Ponce,oponce@example.com,690-1234,Bocas del Toro,Ventas
+1140,Natalia Santana,nsantana@example.com,601-2345,Colón,Recursos Humanos
+1141,Andrés Franco,afranco@example.com,612-3456,Chiriquí,TI
+1142,Monica Rangel,mrangel@example.com,623-4567,Panamá,Contabilidad
+1143,Raúl Miranda,rmiranda@example.com,634-5678,Veraguas,Marketing
+1144,Lucía Acosta,lacosta@example.com,645-6789,Panamá,Operaciones
+1145,Víctor Solís,vsolís@example.com,656-7890,Bocas del Toro,Ventas
+1146,Elena Montes,emontes@example.com,667-8901,Colón,Recursos Humanos
+1147,Mario Campos,mcampos@example.com,678-9012,Chiriquí,TI
+1148,Susana León,sleón@example.com,689-0123,Panamá,Contabilidad
+1149,Alberto Espinoza,aespinoza@example.com,690-1234,Veraguas,Marketing
+1150,Carolina Maldonado,cmaldonado@example.com,601-2345,Panamá,Operaciones

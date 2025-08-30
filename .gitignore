@@ -164,7 +164,7 @@ cython_debug/
 # others
 .vscode/
 .env/
-agenda.csv
+agenda2.csv
 users.db
 contacts.db
 secret.py
